@@ -12,6 +12,9 @@ fstring - f"{variable_1} {variable_2}"
 .removesuffix() - remove a part of string FROM THE END
                  for example, removeprefix(".txt")
                  to remove file extension from file name display
+.replace(replacee, replacer) - replaces all the occurrences of a word with 
+                               another word of your choice (case-sensitive.)
+str() - converts variable into string.
 
 NUMBERS
 ** - exponents
@@ -28,7 +31,8 @@ range(x,y,z) - generates a series of numbers
                    for value in range(2, 11, 2):
                        print(value)
                    THE ABOVE CODE PRINTS EVEN NUMBERS; 2 4 6 8 10
-int() - converts variable into integer
+int() - converts variable into integer.
+float() - converts variable into float.
 
 FLAG
 When a variable holds a boolean value, it's called a flag
@@ -266,4 +270,23 @@ self.attribute = Class() - setting attribute equal to method call from another
                            class.
                            To call such methods:
                               variable.attribute.method()
+Method Chaining - Using 2 methods at once. For example: 
+                  print(variable.read_text().rstrip())
 
+PYTHON STANDARD LIBRARIES
+https://pymotw.com/3/
+
+Random https://pymotw.com/3/random/index.html
+randint(x,y) - gives a random number from between numbers x and y (inclusive.)
+choice() - takes in a list or tuple and randomly gives an item.
+
+Pathlib https://pymotw.com/3/pathlib/index.html
+Path(path) - takes in the path of file we want to work with.
+             .read_text(): returns text of opened file as single string with
+                           blank line at the end. Use .rstrip() to fix.
+             .splitlines(): turns long string into set (list) of lines.
+             .write_text(text): writes text to a file.
+                                Python can only write strings to text file, use
+                                str() when needed.
+                                erases the file and then writes. use cautiously.
+                                
