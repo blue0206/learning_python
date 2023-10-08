@@ -1,4 +1,4 @@
-from pathlib import Path
+from pathlib import Path 
 
 import modules
 
@@ -8,6 +8,13 @@ print(f"My dog is {dog.age} years old!")
 dog.sit()
 dog.roll_over()
 
-path = Path("train/text.txt")
-content = input("Enter Name: ")
-path.write_text(content)
+
+path = Path("train/alice.txt")
+
+try:
+    contents = path.read_text(encoding='utf-8')
+except FileNotFoundError:
+    print(f"Sorry, the file '{path}' does not exist.")
+else:
+    words = contents.split()
+    print(f"The file '{path}' has about {len(words)} words.")    
