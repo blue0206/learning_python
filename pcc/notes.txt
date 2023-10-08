@@ -15,6 +15,8 @@ fstring - f"{variable_1} {variable_2}"
 .replace(replacee, replacer) - replaces all the occurrences of a word with 
                                another word of your choice (case-sensitive.)
 str() - converts variable into string.
+.split() - creates a list of all the words in a string.
+.count() - tells how many times a word or phrase appears in a string.
 
 NUMBERS
 ** - exponents
@@ -128,8 +130,9 @@ for - for item in list_of_items:
         code <everything indented is in the loop>
 while - while condition:
           code
-break - ends the loop
-continue - goes back to the start of loop
+break - ends the loop.
+continue - goes back to the start of loop.
+pass - tells Python to do nothing in a block.
 
 CONDITIONALS
 if and else - if <condition>:
@@ -273,20 +276,42 @@ self.attribute = Class() - setting attribute equal to method call from another
 Method Chaining - Using 2 methods at once. For example: 
                   print(variable.read_text().rstrip())
 
+EXCEPTIONS
+Exception Object - Python creates exception objects when errors arise in 
+                   program execution. Example: ZeroDivisionError exception.
+try-except block - try:
+                       <code>
+                   except error_name:
+                       <code>/pass (to fail silently)
+                   else:
+                       <code>
+                   We put our code in the 'try' block and if it encounters an 
+                   exception, Python looks for an exception block which matches
+                   the name of exception and executes the task given in it 
+                   instead. In case the code in try block does work, Python 
+                   ignores the except block.
+                   Any code that depends on try block succeeding is added to 
+                   else block.
+
 PYTHON STANDARD LIBRARIES
 https://pymotw.com/3/
 
-Random https://pymotw.com/3/random/index.html
+random https://pymotw.com/3/random/index.html
 randint(x,y) - gives a random number from between numbers x and y (inclusive.)
 choice() - takes in a list or tuple and randomly gives an item.
 
-Pathlib https://pymotw.com/3/pathlib/index.html
+pathlib https://pymotw.com/3/pathlib/index.html
 Path(path) - takes in the path of file we want to work with.
              .read_text(): returns text of opened file as single string with
                            blank line at the end. Use .rstrip() to fix.
+                           You can add an encoding argument in ().
+                           For example: file.read_text(encoding='utf-8')
+                           This is needed when your system encoding doesn't 
+                           match system encoding, like when the file was not 
+                           created on your system.
              .splitlines(): turns long string into set (list) of lines.
              .write_text(text): writes text to a file.
                                 Python can only write strings to text file, use
                                 str() when needed.
                                 erases the file and then writes. use cautiously.
-                                
+
