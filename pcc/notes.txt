@@ -1,5 +1,5 @@
 STRINGS
-.title() - capitalize first letter of word
+.title() - capitalize first letter of word.
 .upper() - all letters in upper case
 .lower() - all letters in lower case
 fstring - f"{variable_1} {variable_2}"
