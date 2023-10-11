@@ -181,6 +181,8 @@ def function(**parameter) - **parameter can collect any number of key-value pair
                             the key-value pairs for **parameter are filled in
                             the following format:
                               (key = 'value', key2 = 'value2')
+Refactoring - Improving the code by breaking it into a series of functions with
+              specific assigned jobs.
 
 MODULES
 import file - imports all the functions from a module in same directory
@@ -205,7 +207,11 @@ import styling - in case you're importing from standard library and a module
 CLASSES
 Making an object from a class is called instantiation, and we work with
 instances of a class.
-functions which are part of a class are called method. Their properties are
+When we associate a variable with a class in the main program, it's called an
+instance. For example, in the following code:
+    variable = Class(argument)
+variable is called an instance of Class.
+Functions which are part of a class are called method. Their properties are
 same, the difference lies only in being part of class and calling.
 creating a class:
 class Name:
@@ -293,6 +299,19 @@ try-except block - try:
                    Any code that depends on try block succeeding is added to 
                    else block.
 
+ERROR
+ZeroDivisionError - arises when dividing by zero.
+FileNotFoundError - arises when the file opened via 'Path' doesn't exist.
+NameError - arises when using a variable/function/module that doesn't exist or 
+            isn't used in a valid way.
+TypeError - arises when a required positional argument is missing.
+
+
+STORING DATA (JSON)
+import json
+json.dumps() - takes one argument, converts into JSON format.
+json.loads() - takes JSON formatted string, converts into Python object.
+
 PYTHON STANDARD LIBRARIES
 https://pymotw.com/3/
 
@@ -314,4 +333,35 @@ Path(path) - takes in the path of file we want to work with.
                                 Python can only write strings to text file, use
                                 str() when needed.
                                 erases the file and then writes. use cautiously.
+             .exists(): returns True if a file/folder exists, else False.
 
+THIRD PARTY PYTHON LIBRARIES
+Installed and upgraded using 'pip'.
+Installing package- python -m pip install --user <package_name>
+Upgrading package and pip itself- python -m pip install --upgrade <package_name>
+
+pytest https://doc.pytest.org/en/latest/
+file name - should start with 'test_'.
+function name - should also start with 'test_'.
+Any file/function that starts with 'test_' is recognized by pytest.
+Test function names should be longer and more descriptive.
+running test - to run a test file, open terminal in same directory as program
+               and enter 'pytest' or 'python -m pytest'.
+running test in specific file - Enter 'pytest test_file_name.py'
+fixture - Creates a resource that is used by more than one test, hence helps set
+          up a test environment. REQUIRED: 'import pytest'
+fixture creation - done using the decorator @pytest.fixture
+decorator - a directive placed just before a function definition. Python applies
+            this directive to the function before it runs, to alter how the code
+            behaves.
+
+TESTING
+unit test - verifies that one specific aspect of function's behavior is correct.
+test case - collection of unit tests that together prove that a function behaves
+            as it's supposed to within any situation you expect it to handle.
+assert a == b - assert that two values are equal.
+assert a != b - assert that two values are not equal.
+assert a - assert that a value evaluates to True.
+assert not a - assert that a value evaluates to False.
+assert element in list - assert that an element is in a list.
+assert element not in list - assert that an element is not in a list.
