@@ -1,20 +1,15 @@
-from pathlib import Path 
+from modules import AnonymousSurvey as AS
 
-import modules
+question = "What language did you first learn to speak?"
+language_survey = AS(question)
 
-dog = modules.Dog("Chunchunmaru", 5)
-print(f"My dog's name is {dog.name}")
-print(f"My dog is {dog.age} years old!")
-dog.sit()
-dog.roll_over()
+language_survey.show_question()
+print("Enter 'q' to quit.\n")
+while True:
+    response = input("Language: ")
+    if response == 'q':
+        break
+    language_survey.store_response(response)
 
-
-path = Path("train/alice.txt")
-
-try:
-    contents = path.read_text(encoding='utf-8')
-except FileNotFoundError:
-    print(f"Sorry, the file '{path}' does not exist.")
-else:
-    words = contents.split()
-    print(f"The file '{path}' has about {len(words)} words.")    
+print("\nThanks to everyone who participated in the survey!")
+language_survey.show_results()

@@ -1,17 +1,21 @@
-"""A class that can be used to represent a dog!"""
+class AnonymousSurvey:
+    """Collect anonymous answers to a survey question."""
 
-class Dog:
-    """A simple attempt to model a dog."""
-
-    def __init__(self, name, age):
-        """Initialize name and age attributes."""
-        self.name = name
-        self.age = age
+    def __init__(self, question):
+        """Store a question, and prepare to store a response."""
+        self.question = question
+        self.responses = []
     
-    def sit(self):
-        """Simulate a dog sitting in response to a command."""
-        print(f"{self.name} is now sitting.")
+    def show_question(self):
+        """Show the survey question."""
+        print(self.question)
     
-    def roll_over(self):
-        """Simulate rolling over in response to a command."""
-        print(f"{self.name} rolled over!")
+    def store_response(self, new_response):
+        """Store a single response to the survey."""
+        self.responses.append(new_response)
+    
+    def show_results(self):
+        """Show all the responses that have been given."""
+        print("Survey results:")
+        for response in self.responses:
+            print(f"- {response}")
