@@ -1,29 +1,47 @@
 STRINGS
 .title() - capitalize first letter of word.
+
 .upper() - all letters in upper case
+
 .lower() - all letters in lower case
+
 fstring - f"{variable_1} {variable_2}"
+
 .rstrip() - remove whitespace from the right of target
+
 .lstrip() - remove whitespace from the left of target
+
 .strip() - remove whitespace
+
 .removeprefix() - remove a part of string FROM THE BEGINNING
                  for example, removeprefix('https://')
                  to remove unwanted part of web address
+
 .removesuffix() - remove a part of string FROM THE END
                  for example, removeprefix(".txt")
                  to remove file extension from file name display
+
 .replace(replacee, replacer) - replaces all the occurrences of a word with 
                                another word of your choice (case-sensitive.)
+
 str() - converts variable into string.
+
 .split() - creates a list of all the words in a string.
+
 .count() - tells how many times a word or phrase appears in a string.
+
 
 NUMBERS
 ** - exponents
+
 Modulo Operator(%) - Divides one number by another number and returns remainder
+
 min() - finds the smallest number in a list
+
 max() - finds the highest number in a list
+
 sum() - finds the sum of numbers in a list
+
 range(x,y,z) - generates a series of numbers
                x: initial value of range (0 if not set; is printed)
                y: final value of range (not printed)
@@ -33,32 +51,50 @@ range(x,y,z) - generates a series of numbers
                    for value in range(2, 11, 2):
                        print(value)
                    THE ABOVE CODE PRINTS EVEN NUMBERS; 2 4 6 8 10
+
 int() - converts variable into integer.
+
 float() - converts variable into float.
+
 
 FLAG
 When a variable holds a boolean value, it's called a flag
 
+
 LISTS
 list[-1] - Returns the LAST ITEM in the list.
            Similarly, [-2] (second last), [-3] (third last), etc.
+
 list = [] - Creates an empty list.
+
 .append() - Adds item to the end of the list.
+
 .insert(<position>, <name>) - Inserts item at a specified position in list.
+
 del list[] - Removes an item from the list.
+
 .pop() - Removes the last item in list when no argument is given.
          Removes an item from the list based on argument given.
+
 .remove() - Removes a specific item from the list based on the name given as 
             the argument.
             to remove all instances of a specific item from list, use while loop
+
 .sort() - Permanently sorts the list in Alphabetical order.
+
 .sort(reverse=True) - Permanently sorts the list in reverse Alphabetical order.
+
 sorted() - Temporarily sorts the list in Alphabetical order.
+
 sorted(list, reverse=True) - Temporarily sorts the list in reverse Alphabetical
                              order.
+
 .reverse() - Sorts the list in reverse order. Use again to revert back.
+
 len() - Finds length of list.
+
 list() - takes a single argument (for example, range()) and creates a list.
+
 list[x:y:z] - slices a list
               x: initial array number (0 if not mentioned; is printed)
               y: final array number (Prints last item of list if not mentioned; 
@@ -73,20 +109,25 @@ list[x:y:z] - slices a list
               THE OUTPUT OF ABOVEMENTIONED CODE IS ['a', 'b', 'c', 'd']
                 print(list[2:])
               THE OUTPUT OF ABOVEMENTIONED CODE IS ['c', 'd']
+
 Copying List - list_1 = ['x', 'y']
                list_2 = list_1[:]
                In the abovementioned code, list_1 is sliced and copied into
                list_2
+
 Comprehensive List (for loop) - list = [value for value in range()]
                                 is the same as the following lines of code:
                                 list = []
                                 for value in range():
                                   list.append(value)
+
 if list: - if passing list through if statement returns 'False', it means the
            list is empty and vice-versa  
 
+
 TUPLES (a.k.a Immutable List)
 To define a tuple with single element, add a trailing comma (tuple = (5,))
+
 
 DICTIONARY
 dictionary = {<'key'>: <value>} - creates a dictionary, which is a collection
@@ -94,63 +135,87 @@ dictionary = {<'key'>: <value>} - creates a dictionary, which is a collection
                                   key is used to access value
                                   value can be number, string, list, another 
                                   dictionary, or any object you may creates
+
 dictionary['key'] = <value> - adds a 'key-value' pair to an existing dictionary
+
 del dictionary['key'] - deletes a 'key-value' pair from dictionary
+
 .get() - used in case the key does not exist.
         dictionary = {}
         item = dictionary.get('key', 'value')
         print(item)
+
 .items() - returns a sequence of key-value pairs
           for key, value in dictionary.items():
               print(key)
               print(value)
+
 .keys() - returns the keys of dictionary
           for value in dictionary.keys():
               print(value)
           THE OUTPUT WILL BE ALL THE keys
+
 .values() - returns the values of dictionary, same as .keys()
+
 set() - a collection in which each item is unique
         suppose a dictionary has repetitive values for every key, in that case,
         for value in set(dictionary.values()):
             print(value)
 
+
 NESTING
 A List of Dictionaries - list = [dictionary1, dictionary2]
+
 A List in Dictionary - dictionary = {key: list, key: list}
+
 A Dictionary in Dictionary- dictionary = {key: dictionary, key: dictionary}
+
 
 SET
 set = {x, y, z}
+
 A set is wrapped in braces like a dictionary but does not have key-value pairs.
 The order is not retained in a set, i.e., when printed, x, y, and z can be in 
 any random order.
 
+
 LOOPS
 for - for item in list_of_items:
         code <everything indented is in the loop>
+
 while - while condition:
           code
+
 break - ends the loop.
+
 continue - goes back to the start of loop.
+
 pass - tells Python to do nothing in a block.
+
 
 CONDITIONALS
 if and else - if <condition>:
                   <task>
               else:
                   <task>
+
 if-elif-else - if <condition>:
                   <task>
                elif <condition>:(elif works like else if in python)
                   <task>
                else:
                   <task>
+
 empty string/list/dictionary always return false value and hence, won't execute.
+
 
 LOGIC
 and - TRUE if both conditions satisfy
+
 or - TRUE if either of the conditions satisfy
+
 not - reverses TRUE to FALSE and vice-versa
+
 in - for example,
          num = [0,1,2,3,4]
          if 2 in num:
@@ -160,38 +225,53 @@ in - for example,
       THE OUTPUT is TRUE.
       'in' searches for input in the target.
 
+
 USER INPUT
 input() - takes user input in string form
+
 
 FUNCTIONS
 def - defines a function
       def function():
         <code>
+
 """docstring""" - describes what a function does
+
 parameter - a piece of info a function needs to work
+
 In case of default value of parameter, there should be no spaces on either side
 of '=', the same goes for keyword arguments in function calls.
+
 argument - a piece of info passed from function call to a function
+
 Always mention parameter with default values after the ones without it.
+
 return - returns the value
+
 def function(*parameter) - *parameter can collect any number of arguments
                             Python creates this into tuple
+
 def function(**parameter) - **parameter can collect any number of key-value pair
                             Python creates this into dictionary
                             the key-value pairs for **parameter are filled in
                             the following format:
                               (key = 'value', key2 = 'value2')
+
 Refactoring - Improving the code by breaking it into a series of functions with
               specific assigned jobs.
+
 
 MODULES
 import file - imports all the functions from a module in same directory
               to call a function: module.function()
+
 from file import function, function2 - imports a specific function from a module
                                        function calling is same as normal
+
 from file import * - imports all functions from a module
                      not recommended as python may overwrite existing functions
                      of same name
+
 as - gives an alias to a function or module. Example for function:
      from module import function as fn
      fn() is used for function calling
@@ -204,13 +284,16 @@ import styling - in case you're importing from standard library and a module
                  you wrote, import the standard library module first.
                  Then import your module after a blank line.
 
+
 CLASSES
 Making an object from a class is called instantiation, and we work with
 instances of a class.
+
 When we associate a variable with a class in the main program, it's called an
 instance. For example, in the following code:
     variable = Class(argument)
 variable is called an instance of Class.
+
 Functions which are part of a class are called method. Their properties are
 same, the difference lies only in being part of class and calling.
 creating a class:
@@ -270,21 +353,26 @@ Inheritance - Child class takes on all the attributes and methods from
 super(). - a function which allows us to call method from parent class.
            the parent class is called superclass and child class is called 
            subclass, hence the name.
+
 Overriding Method - to override a method from parent class, set the name of 
                     method in child class to the exact same name as the method 
                     you want to override from parent class.
 
 Composition - Breaking large class into smaller classes that work together.
+
 self.attribute = Class() - setting attribute equal to method call from another
                            class.
                            To call such methods:
                               variable.attribute.method()
+
 Method Chaining - Using 2 methods at once. For example: 
                   print(variable.read_text().rstrip())
+
 
 EXCEPTIONS
 Exception Object - Python creates exception objects when errors arise in 
                    program execution. Example: ZeroDivisionError exception.
+
 try-except block - try:
                        <code>
                    except error_name:
@@ -299,18 +387,25 @@ try-except block - try:
                    Any code that depends on try block succeeding is added to 
                    else block.
 
+
 ERROR
 ZeroDivisionError - arises when dividing by zero.
+
 FileNotFoundError - arises when the file opened via 'Path' doesn't exist.
+
 NameError - arises when using a variable/function/module that doesn't exist or 
             isn't used in a valid way.
+
 TypeError - arises when a required positional argument is missing.
 
 
 STORING DATA (JSON)
 import json
+
 json.dumps() - takes one argument, converts into JSON format.
+
 json.loads() - takes JSON formatted string, converts into Python object.
+
 
 PYTHON STANDARD LIBRARIES
 https://pymotw.com/3/
@@ -335,9 +430,15 @@ Path(path) - takes in the path of file we want to work with.
                                 erases the file and then writes. use cautiously.
              .exists(): returns True if a file/folder exists, else False.
 
+sys https://pymotw.com/3/sys/index.html
+System Specific Configuration
+
+
 THIRD PARTY PYTHON LIBRARIES
 Installed and upgraded using 'pip'.
+
 Installing package- python -m pip install --user <package_name>
+
 Upgrading package and pip itself- python -m pip install --upgrade <package_name>
 
 pytest https://doc.pytest.org/en/latest/
@@ -357,11 +458,18 @@ decorator - a directive placed just before a function definition. Python applies
 
 TESTING
 unit test - verifies that one specific aspect of function's behavior is correct.
+
 test case - collection of unit tests that together prove that a function behaves
             as it's supposed to within any situation you expect it to handle.
+
 assert a == b - assert that two values are equal.
+
 assert a != b - assert that two values are not equal.
+
 assert a - assert that a value evaluates to True.
+
 assert not a - assert that a value evaluates to False.
+
 assert element in list - assert that an element is in a list.
+
 assert element not in list - assert that an element is not in a list.
